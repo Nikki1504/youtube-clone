@@ -2,13 +2,20 @@ import React from "react";
 import { Search } from "lucide-react";
 import { CircleUserRound } from "lucide-react";
 import { Menu } from "lucide-react";
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/Store/Slice/appSlice";
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
+  };
   return (
     <div className="p-2 m-1 grid grid-flow-col shadow-md">
       <div className="flex col-span-1 items-center gap-2">
         <div className="p-2 rounded-full hover:bg-neutral-200 cursor-pointer">
-          <Menu />
+          <Menu onClick={() => toggleMenuHandler()} />
         </div>
         <a href="/">
           <img
