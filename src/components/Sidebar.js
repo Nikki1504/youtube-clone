@@ -72,17 +72,17 @@ const Sidebar = () => {
 
   if (!isMenuOpen) {
     return (
-      <div className="w-20 h-screen border-r border-gray-200 p-3 text-xs">
+      <div className="w-24 h-screen border-r border-gray-200 p-3 text-xs">
         <MiniSidebar icon={<Home size={22} />} label="Home" />
         <MiniSidebar icon={<Sparkles size={22} />} label="Shorts" />
-        <MiniSidebar icon={<PlaySquare size={22} />} label="Subs" />
+        <MiniSidebar icon={<PlaySquare size={22} />} label="Subscriptions" />
         <MiniSidebar icon={<History size={22} />} label="History" />
       </div>
     );
   }
 
   return (
-    <div className="w-60 h-screen overflow-y-auto p-3 border-r border-gray-200 text-sm">
+    <div className="w-60 h-screen overflow-y-auto p-3 border-gray-200 text-sm">
       {/* SECTION 1 */}
       <div className="pb-4 border-b border-gray-200">
         {menuItems.map((item) => (
@@ -92,7 +92,7 @@ const Sidebar = () => {
 
       {/* SECTION 2 */}
       <div className="py-4 border-b border-gray-200">
-        <p className="px-3 pb-2 text-xs uppercase text-gray-500">You</p>
+        <p className="px-3 pb-2 text-xs uppercase text-black font-bold">You</p>
         {youSection.map((item) => (
           <SidebarRow key={item.title} title={item.title} icon={item.icon} />
         ))}
@@ -100,7 +100,7 @@ const Sidebar = () => {
 
       {/* SECTION 3 */}
       <div className="py-4 border-b border-gray-200">
-        <p className="px-3 pb-2 text-xs uppercase text-gray-500">Explore</p>
+        <p className="px-3 pb-2 text-sm text-black font-bold">Explore</p>
         {explore.map((item) => (
           <SidebarRow key={item.title} title={item.title} icon={item.icon} />
         ))}
@@ -118,7 +118,7 @@ const Sidebar = () => {
 
 const SidebarRow = ({ icon, title }) => {
   return (
-    <div className="flex items-center gap-4 px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-200 transition">
+    <div className="flex items-center gap-4 px-3 py-2 rounded-lg cursor-pointer hover:bg-neutral-100 transition">
       <span className="text-black">{icon}</span>
       <span className="text-gray-800">{title}</span>
     </div>
@@ -127,9 +127,9 @@ const SidebarRow = ({ icon, title }) => {
 
 const MiniSidebar = ({ icon, label }) => {
   return (
-    <div className="flex flex-col items-center gap-1 py-4 cursor-pointer hover:bg-gray-200 rounded-lg">
+    <div className="flex flex-col items-center gap-1 py-4 cursor-pointer hover:bg-neutral-100 rounded-xl">
       <span>{icon}</span>
-      <span className="text-[10px] text-gray-700">{label}</span>
+      <span className="text-[9px] text-black">{label}</span>
     </div>
   );
 };
