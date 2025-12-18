@@ -12,7 +12,7 @@ const Header = () => {
     dispatch(toggleMenu());
   };
   return (
-    <div className="p-2 m-1 grid grid-flow-col shadow-md">
+    <div className="p-2 m-1 sticky top-0 z-50 bg-white grid grid-flow-col shadow-md">
       <div className="flex col-span-1 items-center gap-2">
         <div className="p-2 rounded-full hover:bg-neutral-200 cursor-pointer">
           <Menu onClick={() => toggleMenuHandler()} />
