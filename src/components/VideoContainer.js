@@ -8,14 +8,13 @@ const VideoContainer = () => {
   useFetchVideos();
 
   const videos = useSelector((store) => store.videos.videosList);
-  // console.log(videos);
 
   if (!videos) return null;
 
   return (
     <div className="grid grid-cols-3 gap-6 p-4">
       {videos.map((video) => (
-        <Link to={"/watch?v=" + video.id }>
+        <Link to={"/watch?v=" + video.id}>
           <VideoCard key={video.id} info={video} />
         </Link>
       ))}
