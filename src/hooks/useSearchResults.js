@@ -10,7 +10,7 @@ const useSearchResults = (searchQuery) => {
   const [suggestion, setSuggestion] = useState([]);
 
   const getSearchResults = async () => {
-    console.log(searchQuery);
+    // console.log(searchQuery);
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
     setSuggestion(json[1]);
