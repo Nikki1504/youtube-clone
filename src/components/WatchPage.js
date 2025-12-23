@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import VideoInfo from "./VideoInfo";
 import useChannelDetails from "../hooks/useChannelDetails";
 import CommentContainer from "./CommentContainer";
+import LiveChat from "./LiveChat";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -20,12 +21,10 @@ const WatchPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col">
-      <div className="px-3">
+    <div className="flex px-4 w-full">
+      <div className="flex-1">
         <iframe
-          className="rounded-xl"
-          width="1000"
-          height="550"
+          className="rounded-xl w-full aspect-video"
           src={"https://www.youtube.com/embed/" + videoId}
           title="YouTube video player"
           frameBorder="0"
@@ -34,8 +33,11 @@ const WatchPage = () => {
           allowFullScreen
         ></iframe>
         <VideoInfo videoid={videoId} />
+        <CommentContainer />
       </div>
-      <CommentContainer />
+      <div className="w-96 shrink-0">
+        <LiveChat />
+      </div>
     </div>
   );
 };
