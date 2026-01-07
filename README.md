@@ -36,7 +36,7 @@ REACT_APP_YOUTUBE_API_KEY=your_google_api_key_here
 - Variable name must start with REACT*APP*
 - Do NOT commit .env to GitHub
 
-2️- API usage in code
+2- API usage in code
 const GOOGLE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
 Used for:
