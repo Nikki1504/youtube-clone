@@ -23,12 +23,12 @@ const LiveChat = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="ml-2 h-[560px] w-full rounded-lg border border-gray-300  overflow-y-scroll flex flex-col">
+    <div className="ml-2 h-[560px] w-full rounded-lg border border-gray-300 flex flex-col">
       <h1 className="font-light p-3 pl-5 w-full bg-white sticky top-0 border-b border-gray-300 z-10 flex items-center cursor-pointer">
         Top Chat
         <ChevronDown />
       </h1>
-      <div className="flex flex-col-reverse flex-1 p-2">
+      <div className="flex flex-col-reverse overflow-y-auto flex-1 p-2">
         {chatMessages.map((c, i) => (
           <ChatMessage key={i} name={c.name} message={c.message} />
         ))}
@@ -52,6 +52,7 @@ const LiveChat = () => {
           className="w-full border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
           type="text"
           value={liveMessage}
+          placeholder="Chat..."
           onChange={(e) => {
             setLiveMessage(e.target.value);
           }}

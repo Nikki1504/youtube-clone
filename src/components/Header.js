@@ -47,7 +47,7 @@ const Header = () => {
             </button>
           </div>
 
-          {showSuggestions && (
+          {showSuggestions && suggestion.length > 0 && (
             <div className="absolute left-0 right-0 top-full bg-white py-2 shadow-lg rounded-lg border border-gray-100 mt-1 z-50">
               <ul>
                 {suggestion.map((s) => (

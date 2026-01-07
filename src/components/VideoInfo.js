@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import useVideoDetails from "../hooks/useVideoDetails";
-import {
-  ArrowDownToLine,
-  Bookmark,
-  Share2,
-  Share2Icon,
-  ThumbsDown,
-  ThumbsUp,
-} from "lucide-react";
+import { ArrowDownToLine, Bookmark, Share2, ThumbsUp } from "lucide-react";
 
 const VideoInfo = ({ videoid }) => {
   const [showMore, setShowMore] = useState(false);
@@ -20,14 +13,10 @@ const VideoInfo = ({ videoid }) => {
   return (
     <div>
       <div className="px-2 mt-4 max-w-4xl">
-        {/* TITLE */}
         <h1 className="text-lg font-semibold">{video?.snippet?.title}</h1>
 
-        {/* CHANNEL + ACTIONS */}
         <div className="flex justify-between items-center mt-3">
-          {/* LEFT */}
           <div className="flex items-center gap-3">
-            {/* Channel Image */}
             <img
               src={channel?.snippet?.thumbnails?.default?.url}
               alt="channel"

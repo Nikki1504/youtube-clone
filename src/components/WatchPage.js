@@ -13,6 +13,7 @@ const WatchPage = () => {
   const dispatch = useDispatch();
 
   const video = useSelector((store) => store.videos.selectedVideo);
+  
 
   useChannelDetails(video?.snippet?.channelId);
 

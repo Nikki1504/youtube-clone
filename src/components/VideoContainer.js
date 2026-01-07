@@ -8,6 +8,7 @@ const VideoContainer = () => {
   useFetchVideos();
 
   const videos = useSelector((store) => store.videos.videosList);
+  const channelImage = useSelector((store) => store.channel.channelInfo);
 
   if (!videos) return null;
 
