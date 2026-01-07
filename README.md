@@ -1,4 +1,4 @@
-🎥 YouTube Clone (React)
+## 🎥 YouTube Clone (React)
 
 A YouTube-like video streaming application built using React, Redux Toolkit, and Tailwind CSS.
 The project replicates core YouTube features such as video listing, watch page, live chat simulation, recursive comments, and debounced search suggestions.
@@ -10,17 +10,21 @@ The project replicates core YouTube features such as video listing, watch page, 
 - React Router DOM
 - Tailwind CSS
 
-▶️ Getting Started
+### ▶️ Getting Started
 
 1️⃣ Clone the repository
 
+```bash
 git clone https://github.com/your-username/youtube-clone.git
 
 cd youtube-clone
+```
 
 2️⃣ Install dependencies
 
+```bash
 npm install
+```
 
 3️⃣ Add your Google API Key
 
@@ -30,7 +34,7 @@ Create a file (or update existing):
 
 src/utils/constants.js
 
-🔑 Environment Variables (Required)
+## 🔑 Environment Variables (Required)
 
 This project uses the YouTube Data API v3.
 
@@ -38,7 +42,9 @@ You must provide your own API key.
 
 1- Create a .env file in the root directory
 
+```env
 REACT_APP_YOUTUBE_API_KEY=your_google_api_key_here
+```
 
 ⚠️ Important:
 
@@ -58,15 +64,17 @@ Used for:
 
 4️⃣ Run the project locally
 
+```bash
 npm start
+```
 
 The app will run on:
 👉 http://localhost:3000
 
-📌 Disclaimer
+### 📌 Disclaimer
 
 This project is built for educational and portfolio purposes only.
 
-👨‍💻 Author
+### 👨‍💻 Author
 
 Built with ❤️ by Nikita Thakur
