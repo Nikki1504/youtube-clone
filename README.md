@@ -75,6 +75,19 @@ The app will run on:
 
 This project is built for educational and portfolio purposes only.
 
+## ⚠️ Search Suggestions Note
+
+The search suggestions feature uses Google's `suggestqueries` API.
+
+This API does **not support CORS**, so search suggestions work in local development but may be blocked in production deployments (e.g. Vercel over HTTPS).
+
+In a real-world production setup, this would be handled via:
+
+- A backend proxy / serverless function
+- Or a custom suggestion service
+
+The core search flow and video fetching functionality remain fully functional.
+
 ### 👨‍💻 Author
 
 Built with ❤️ by Nikita Thakur
