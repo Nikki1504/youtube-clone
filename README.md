@@ -3,6 +3,8 @@
 A YouTube-like video streaming application built using React, Redux Toolkit, and Tailwind CSS.
 The project replicates core YouTube features such as video listing, watch page, live chat simulation, recursive comments, and debounced search suggestions.
 
+Live Demo - https://youtubeclone-one-nu.vercel.app/
+
 🛠 Tech Stack
 
 - React 19
